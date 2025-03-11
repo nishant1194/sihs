@@ -1,0 +1,8 @@
+.mainC{
+    display: flex;
+    justify-content: space-between;
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+}

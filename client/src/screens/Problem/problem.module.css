@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    height:100vh;
+    background-color: rgb(216, 216, 216);
+  }
+  .ps{
+    width: 50%;
+    height: 88%;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+  }
+  .codeEditor{
+    width: 50%;
+     
+   }
+
+  .exaplemDiv{
+    background-color: aliceblue;
+    margin: 20px;
+  }
+
+  .inputLine{
+    padding: 10px;
+  }
+  .submitBtn{
+    padding: 10px;
+    background-color: green;
+  }
+
+  .console{
+    background-color: rgb(216, 216, 216);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+
+  }
+  .cons{
+    height: 125px;
+    padding:10px;
+    background-color: white;
+    border-radius: 8px;
+  }
