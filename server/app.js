@@ -24,7 +24,14 @@ connectDb();
  app.use('/api/v1', ProblemR);   
  app.use('/api/v1', SolutionR);   
  app.use('/api/v1', SubmissionR);   
- app.use('/api/v1', User);   
+ app.use('/api/v1', User); 
+ 
+ app.get('*',(req,res,next)=>{
+    res.status(200).json({
+      message:'received request'
+    })
+  })
+  
 
  module.exports = app ;
 
