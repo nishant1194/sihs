@@ -9,14 +9,18 @@ const SubmissionR = require('./routes/SubmissionR.js');
 const User = require('./routes/User.js');
 const connectDb = require('./utils/dbConnect.js');
 
-
-
 const app = express();
+
+app.use(cors({
+    origin: '*',
+    credentials: true
+  }));
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());  
-
 connectDb();
 
  
