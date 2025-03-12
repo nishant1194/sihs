@@ -8,6 +8,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Solutions from "../../components/psSolution/PsSolution";
 import Login from "../login/Login";
 import Profile from "../profile/Profile";
+import Linkk from "../../utils/Link";
 
 export default function HomeScreen() {
   const [prb, setPrb] = useState([]);
@@ -18,7 +19,7 @@ export default function HomeScreen() {
 
   const getProblem = async () => {
     try {
-      const resp = await axios.get("http://localhost:5006/api/v1/problems");
+      const resp = await axios.get(Linkk+"/api/v1/problems");
       setPrb(resp.data);
     } catch (err) {
       console.log(err);
@@ -27,7 +28,7 @@ export default function HomeScreen() {
 
   const delProblem = async (id) => {
     try {
-      await axios.delete(`http://localhost:5006/api/v1/problems/${id}`);
+      await axios.delete(Linkk+`/api/v1/problems/${id}`);
       setPrb(prb.filter((problem) => problem._id !== id));
     } catch (err) {
       console.log(err);

@@ -1,3 +1,3 @@
-const Linkk = "http://localhost:5006/api/v1"
+const Linkk = "https://sihs-mu.vercel.app"
 
 export default Linkk

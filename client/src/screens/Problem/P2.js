@@ -4,6 +4,7 @@ import { Editor } from "@monaco-editor/react";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios"
 import Button from '@mui/material/Button';
+import Linkk from "../../utils/Link";
 
 export default function P2(props) {
   const[output , setOutput] = useState();
@@ -42,7 +43,7 @@ export default function P2(props) {
   const submitHandler=async(code)=>{
     try {
       setError(''); // Clear previous errors
-      const response = await axios.post('http://localhost:5006/api/execute', {
+      const response = await axios.post(Linkk+'/api/execute', {
          code: code,
           language: "java", 
       })

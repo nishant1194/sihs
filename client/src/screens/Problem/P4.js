@@ -38,7 +38,7 @@ export default function App() {
   const getProblem = async () => {
     try {
       const resp = await axios.get(
-        `http://localhost:5006/api/v1/problems/${id}`
+        Linkk+`/api/v1/problems/${id}`
       );
       
       setPrb(resp.data);
@@ -69,7 +69,7 @@ export default function App() {
     const fullCode =
       headerCode[selectedValue] + defuserCode + "\n" + hiddenDriverCode;
     try {
-      const response = await axios.post("http://localhost:5006/api/execute", {
+      const response = await axios.post(Linkk+"/api/execute", {
         code: fullCode,
         language: selectedValue,
         stdin: testCases,
@@ -96,7 +96,7 @@ export default function App() {
     const hiddenCodeLinesCount = hiddenDriverCode.split("\n").length;
     const fullCode = headerCode[selectedValue] + defuserCode + "\n" + hiddenDriverCode;
     try {
-      const response = await axios.post("http://localhost:5006/api/execute", {
+      const response = await axios.post(Linkk+"/api/execute", {
         code: fullCode,
         language: selectedValue,
         stdin: hardtestCases,

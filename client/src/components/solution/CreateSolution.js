@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Editor from '@monaco-editor/react';
 
@@ -13,6 +13,7 @@ import {
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
 import CodeEditor from "../codeEditor/CodeEditor";
+import Linkk from "../../utils/Link";
  
 export default function CreateSolution(props) {
   const { id } = useParams();
@@ -46,7 +47,7 @@ export default function CreateSolution(props) {
   const addSol = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5006/api/v1/solution",
+        Linkk+"/api/v1/solution",
         psol
       );
       console.log(psol)

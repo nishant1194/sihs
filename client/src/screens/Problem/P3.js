@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Editor } from "@monaco-editor/react";
 import axios from "axios"
 import Button from '@mui/material/Button';
+import Linkk from '../../utils/Link';
 
 export default function P3() {
     const[code , setCode] = useState("") ;
@@ -51,7 +52,7 @@ export default function P3() {
       const submitHandler=async(code)=>{
         try {
          
-          const response = await axios.post('http://localhost:5006/api/execute', {
+          const response = await axios.post(Linkk+'/api/execute', {
              code: code,
               language: "java", 
           })

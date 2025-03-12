@@ -7,6 +7,7 @@ import "react-quill/dist/quill.snow.css";
 import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import Linkk from "../../utils/Link.js";
 
 export default function Createps() {
   const [open, setOpen] = React.useState(false);
@@ -147,7 +148,7 @@ export default function Createps() {
 
   const submitCode = async () => {
     try {
-      const resp = await axios.post("http://localhost:5006/api/v1/problems", {
+      const resp = await axios.post(Linkk+"/api/v1/problems", {
         pid,
       });
       console.log(resp);

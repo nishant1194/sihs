@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import React, { useState ,useEffect} from 'react'
 import { useParams , Link} from "react-router-dom";
 import axios from 'axios';
+import Linkk from '../../utils/Link';
 export default function Solutions(props) {
     const { id } = useParams();
     const[sol , setSol] = useState([]);
@@ -12,7 +13,7 @@ export default function Solutions(props) {
   
     const createSol = async() =>{
       try{
-        const resp = await axios.get(`http://localhost:5006/api/v1/solution/problem/${id}`)
+        const resp = await axios.get(Linkk+`/api/v1/solution/problem/${id}`)
         console.log(resp.data);
         setSol(resp.data);
   
