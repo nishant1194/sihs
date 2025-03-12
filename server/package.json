@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "nodemon": "nodemon index.js"
   },
   "author": "",
@@ -16,7 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.1",
+    "mongoose": "^8.12.1",
     "nodemon": "^3.1.7"
   }
 }
